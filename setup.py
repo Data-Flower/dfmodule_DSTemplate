@@ -2,12 +2,12 @@ from setuptools import setup, find_packages
 
 setup(
     name="dfmodule_DSTemplate",
-    version="0.0.2",
+    version="0.0.3",
     description="dfmodule for DE -> DS code transition",
     author="SG, JH",
     author_email="rimmoyee@example.com",
     url="https://github.com/Data-Flower/dfmodule_DSTemplate",
-    install_requires=['boto3', 'pandas', 'python-dotenv', 'requests'],
+    install_requires=['boto3', 'pandas', 'python-dotenv', 'requests', 'dfmodule'],
     packages=find_packages(exclude=['tests*']),
     keywords=['dfmodule_DS, dfmodule, dfmodule_DSTemplate'],
     python_requires='>=3.6',
