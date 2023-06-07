@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="dfmodule_DSTemplate",
-    version="0.0.1",
+    version="0.0.2",
     description="dfmodule for DE -> DS code transition",
     author="SG, JH",
     author_email="rimmoyee@example.com",
