@@ -53,14 +53,15 @@ def load_AIModel(aiModel, filename,
     None.
     """
 
-    import common.compress_
+    import json
+    import gzip
     import os
 
     if aiModel is None:
         raise ValueError("aiModel is None")
 
     directory = f'items/AIModel/{filename}.gz'    
-    compressed_data = common.compress_.compress(aiModel)
+    compressed_data = gzip.compress(json.dumps(aiModel, ensure_ascii=False, indent=4).encode('utf-8'))
 
     s3 = _s3_connection(aws_access_key_id, aws_secret_access_key)
     aws_s3_bucket_name = aws_s3_bucket_name
