@@ -11,7 +11,6 @@ def _s3_connection(aws_access_key_id,
     -------
     s3 : boto3.client
     '''
-    import os
     import boto3
 
     try:
@@ -55,7 +54,6 @@ def load_AIModel(aiModel, filename,
 
     import json
     import gzip
-    import os
 
     if aiModel is None:
         raise ValueError("aiModel is None")
